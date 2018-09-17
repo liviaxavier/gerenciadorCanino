@@ -9,6 +9,8 @@ import { NavComponent } from './nav/nav/nav.component';
 import { ControllersComponent } from './list/controllers/controllers.component';
 import { ImageComponent } from './list/image/image.component';
 import { NameComponent } from './list/name/name.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { NameComponent } from './list/name/name.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
