@@ -11,6 +11,7 @@ import { ImageComponent } from './list/image/image.component';
 import { NameComponent } from './list/name/name.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { ExpandComponent } from './list/expand/expand.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RouterModule } from '@angular/router';
     ControllersComponent,
     ImageComponent,
     NameComponent,
-    ListComponent
+    ListComponent,
+    ExpandComponent
   ],
   imports: [
     BrowserModule,
