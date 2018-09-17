@@ -1,5 +1,7 @@
 <section class="search">
-  <input class="form-control form-control-lg" type="text" placeholder="Qual raça você procura?">
-  <button type="button" class="btn btn-info">Pesquisar</button>
+  <input class="form-control form-control-lg" type="text" placeholder="Qual raça você procura?" name="breedName" id="breedName" [(ngModel)]="breedName">
+  <button type="button" (click)="search()" class="btn btn-info">Pesquisar</button>
+  <div class="response" *ngIf="response">
+    <img id="breedImage" src={{response.message}} alt="">
+  </div>
 </section>
-

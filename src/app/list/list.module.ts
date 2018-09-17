@@ -10,6 +10,6 @@ import { ExpandComponent } from './expand/expand.component';
   imports: [
     CommonModule
   ],
-  declarations: [ListComponent, ControllersComponent, ImageComponent, NameComponent, ExpandComponent]
+  declarations: [ListComponent, ControllersComponent, ImageComponent, NameComponent, ExpandComponent],
 })
 export class ListModule { }
