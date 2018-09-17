@@ -18,9 +18,17 @@ export class ControllersComponent implements OnInit {
     this.http.get(images).subscribe((response)=>{
       this.response = response;
       this.images = this.response.message;
-  })
+    })
+  }
+  edit(){
+    console.log(`Quero editar ${this.name}`)
+  }
+  delete(){
+    console.log(`Quero deletar ${this.name}`)
   }
   expand(){
     this.expandImage = !this.expandImage;
   }
+
+
 }

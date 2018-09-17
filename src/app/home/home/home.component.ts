@@ -7,20 +7,28 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  breedName: string = "";
+  breedName: string;
+  subBreedName:string;
+  subBreeds: string[];
   response:any;
+  responseSubBreed:any;
+  subBreed:any;
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
 
   }
+  seeSubBreeds(){
+      let images = `https://dog.ceo/api/breed/${this.breedName}/list`;
+      this.http.get(images).subscribe((response)=>{
+        this.response = response;
+        this.subBreeds = this.response.message;
+    })
+  }
   search(){
-    // this.http.get(`https://api.github.com/users/${this.breedName}`).subscribe((response)=>{
-    //   this.response = response;
-    // })
-    let images = `https://dog.ceo/api/breed/${this.breedName}/images/random`;
-    this.http.get(images).subscribe((response)=>{
-      this.response = response;
-  })
+    let subBreedImages = `https://dog.ceo/api/breed/${this.breedName}/${this.subBreedName}/images/random`;
+      this.http.get(subBreedImages).subscribe((responseSubBreed)=>{
+        this.responseSubBreed = responseSubBreed;
+    })
   }
 }

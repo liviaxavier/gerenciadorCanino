@@ -10,11 +10,19 @@
     }
     .response{
         display: flex;
-        justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+        flex-direction: column;
+        width: auto;
+        margin: auto;
+        height: auto;
+        margin-top: 1em;
+        border-radius: 5px;
         img{
             width: 80vw;
             margin: auto;
+        }
+        input{
+            margin-right: 1em;
         }
     }
 }
