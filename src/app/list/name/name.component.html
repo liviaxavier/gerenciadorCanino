@@ -1,1 +1,8 @@
-<h4>{{name}}</h4>
+<div>
+    <i *ngIf="!editMode" (click)="edit()" class="material-icons">edit</i>
+    <h4 *ngIf="!editMode && !initial">{{breedName.value}}</h4>
+    <h4 *ngIf="initial">{{name}}</h4>
+    <i *ngIf="editMode" (click)="confirm()" class="material-icons">check</i>
+    <input *ngIf="editMode" type="text" [formControl]="breedName">
+</div>
+

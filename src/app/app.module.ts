@@ -11,7 +11,7 @@ import { ImageComponent } from './list/image/image.component';
 import { NameComponent } from './list/name/name.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ExpandComponent } from './list/expand/expand.component';
 
 @NgModule({
@@ -30,6 +30,7 @@ import { ExpandComponent } from './list/expand/expand.component';
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
+    ReactiveFormsModule,
     FormsModule
   ],
   providers: [],

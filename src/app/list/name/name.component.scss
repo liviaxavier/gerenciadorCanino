@@ -1,4 +1,30 @@
 h4{
     margin: 0;
     color: white;
+    width: 80%;
 }   
+div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50vw;
+    input{
+        background-color: transparent;
+        border: none;
+        font-size: 18pt;
+        color: white;
+        width: 80%;
+        border-bottom: solid 1px #555;
+    }
+    .material-icons{
+        cursor: pointer;
+        color: #ddd;
+        margin: 0 5px;
+        &:hover{
+            color: #222;
+        }
+        &:active{
+            color: #222;
+        }
+    }
+}
