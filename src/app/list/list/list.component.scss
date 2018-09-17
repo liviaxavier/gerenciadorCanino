@@ -11,30 +11,7 @@ ul{
         min-height: 100px;
         padding: 0 1em;
         justify-content: space-between;
-        border-radius: 10px;
-        img{
-            width: 70px;
-            height: 70px;
-            background-color: #222;
-            border-radius: 10px;
-        }
-        h4{
-            margin: 0;
-            color: white;
-        }
-        .controllers{
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        .material-icons{
-            cursor: pointer;
-            color: #ddd;
-            margin: 5px auto;
-            &:hover{
-                color: #222;
-            }
-        }
+        border-radius: 10px;     
     }
     
     

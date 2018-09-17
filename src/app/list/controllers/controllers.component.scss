@@ -1,0 +1,13 @@
+.controllers{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .material-icons{
+        cursor: pointer;
+        color: #ddd;
+        margin: 5px auto;
+        &:hover{
+            color: #222;
+        }
+    }
+}
