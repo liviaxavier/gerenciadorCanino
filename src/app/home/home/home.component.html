@@ -1,11 +1,10 @@
 <section class="search">
   <input class="form-control form-control-lg" type="text" placeholder="Qual raça você procura?" name="breedName" id="breedName" [(ngModel)]="breedName">
   <div *ngIf="response" class="response">
-    <div  *ngFor="let subBreed of subBreeds">
-        <input name="subBreedName" [(ngModel)]="subBreedName" type="radio" name={{subBreed}} id={{subBreed}} value={{subBreed}}>
-        <label for={{subBreed}}>{{subBreed}}</label>
-    </div>
-    
+    <label *ngFor="let subBreed of subBreeds" for={{subBreed}}>
+      <input name="subBreedName" [(ngModel)]="subBreedName" type="radio" name={{subBreed}} id={{subBreed}} value={{subBreed}}>
+      {{subBreed}}
+    </label>
   </div>
   <button *ngIf="!response" type="button" (click)="seeSubBreeds()" class="btn btn-info">Ver sub-raças</button>
   <button *ngIf="response" type="button" (click)="search()" class="btn btn-info">Pesquisar</button>
@@ -13,3 +12,4 @@
     <img id="breedImage" src={{responseSubBreed.message}} alt="">
   </div>
 </section>
+<app-list></app-list>

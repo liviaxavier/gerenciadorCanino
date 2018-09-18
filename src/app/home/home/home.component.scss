@@ -1,6 +1,5 @@
 .search{
     margin: 1em;
-    min-height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,18 +10,19 @@
     .response{
         display: flex;
         align-items: flex-start;
-        flex-direction: column;
+        flex-wrap: wrap;
         width: auto;
         margin: auto;
         height: auto;
         margin-top: 1em;
         border-radius: 5px;
+        label{
+            margin-right: 1em;
+        }
         img{
             width: 80vw;
             margin: auto;
         }
-        input{
-            margin-right: 1em;
-        }
+        
     }
 }

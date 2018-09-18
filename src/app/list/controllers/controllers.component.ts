@@ -20,9 +20,6 @@ export class ControllersComponent implements OnInit {
       this.images = this.response.message;
     })
   }
-  delete(){
-    console.log(`Quero deletar ${this.name}`)
-  }
   expand(){
     this.expandImage = !this.expandImage;
   }

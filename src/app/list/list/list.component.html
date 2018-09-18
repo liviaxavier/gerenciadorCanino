@@ -1,7 +1,10 @@
 <ul>
-  <li *ngFor="let breed of namesArray" id={{breed}}>
-    <app-image [name]="breed"></app-image>
-    <app-name [name]="breed"></app-name>
-    <app-controllers [name]="breed"></app-controllers>
-  </li>
+  <ng-container *ngFor="let breed of namesArray">
+    <li *ngIf="active" id={{breed}}>
+      <app-image [name]="breed"></app-image>
+      <app-name [name]="breed"></app-name>
+      <app-controllers [name]="breed"></app-controllers>
+      <i (click)="delete(breed)" class="material-icons delete">delete</i>
+    </li>
+  </ng-container>
 </ul>

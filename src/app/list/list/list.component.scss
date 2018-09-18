@@ -13,6 +13,14 @@ ul{
         justify-content: space-between;
         border-radius: 10px;    
         margin-bottom: 1em; 
+        .delete{
+            color: #ddd;
+            &:hover{
+                color:crimson;
+                cursor: pointer;
+
+            }
+        }
     }
     
     
