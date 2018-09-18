@@ -1,8 +1,15 @@
 <h1>Bem vindo ao Gerenciador Canino!</h1>
-<li *ngFor="let breed of breedsList">
-    <app-resume [info]="breed"></app-resume>
-    <i (click)="readMore(breed)" class="material-icons delete">expand_more</i>
-    <i (click)="update(breed)" class="material-icons delete">edit</i>
-    <i (click)="delete(breed)" class="material-icons delete">delete</i>
-</li>
+<input type="text" [(ngModel)]="breedSearch">
+<p>{{breedSearch}}</p>
+<div class="subBreeds">
+    <button type="button" class="readMore" *ngFor="let name of subBreeds">{{name}}</button>
+</div>
+<section>
+    <div class="list" *ngFor="let breed of breedsList">
+        <app-resume [info]="breed" [(img)]="breedImage" [listSubBreeds]="subBreed"></app-resume>
+        <i (click)="readMore(breed)" class="material-icons delete">expand_more</i>
+        <i (click)="update(breed)" class="material-icons delete">edit</i>
+        <i (click)="delete(breed)" class="material-icons delete">delete</i>
+    </div>
+</section>
 <!-- <router-outlet></router-outlet> -->

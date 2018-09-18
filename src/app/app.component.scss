@@ -2,3 +2,21 @@ h1  {
     width: 90%;
     margin: 1em auto;
 }
+.list{
+    display: flex;
+    list-style: none;
+    width: 80vw;
+    justify-content: space-between;
+    margin: auto;
+    i{
+        cursor: pointer;
+    }
+}
+.subBreeds{
+    top: 3em;
+    right: 3em;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+
+}

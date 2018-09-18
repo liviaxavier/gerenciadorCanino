@@ -10,7 +10,8 @@ export class AppComponent {
   breedsList:string[];
   response: any;
   breedsName: any[];
-
+  responseSubBreeds:any;
+  subBreeds:string[];
   constructor(private http: HttpClient) { 
     let urlBreeds = 'https://dog.ceo/api/breeds/list';
     this.http.get(urlBreeds).subscribe((response)=>{
@@ -21,12 +22,32 @@ export class AppComponent {
     })
   }
   delete(e){
-    for(let i in this.breedsList){
-      if(this.breedsList[i] == e){
+    for(let i of this.breedsList){
+      if(i == e){
         if(confirm(`Tem certeza que quer apagar a raça ${e} dessa lista? :(`)) {
-          this.breedsList.splice(i,1)
+          let number = this.breedsList.indexOf(i)
+          this.breedsList.splice(number,1)
         }
       }
     }
   }
+  update(e){
+  console.log(`Quero editar ${e}`)
+  }
+  readMore(e){
+    let urlSubBreeds = 'https://dog.ceo/api/breeds/list/all';
+    this.http.get(urlSubBreeds).subscribe((responseSubBreeds)=>{
+      this.responseSubBreeds = responseSubBreeds;
+      if(this.responseSubBreeds.status == 'success' ){
+        this.subBreeds = this.responseSubBreeds.message[e];
+        console.log(this.subBreeds)
+      }
+    })
+    } 
+  // search(){
+  //   let subBreedImages = `https://dog.ceo/api/breed/${this.breedName}/${this.subBreedName}/images/random`;
+  //     this.http.get(subBreedImages).subscribe((responseSubBreed)=>{
+  //       this.responseSubBreed = responseSubBreed;
+  //   })
+  // }
 }
