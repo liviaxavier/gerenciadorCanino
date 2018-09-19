@@ -21,10 +21,11 @@ export class ListComponent implements OnInit {
   })
   }
   delete(e){
-    for(let i in this.namesArray){
-      if(this.namesArray[i] == e){
+    for(let i of this.namesArray){
+      if(i == e){
         if(confirm(`Tem certeza que quer apagar a raça ${e} dessa lista? :(`)) {
-          this.namesArray.splice(i,1)
+          let number = this.namesArray.indexOf(i);
+          this.namesArray.splice(number,1)
         }
       }
     }
